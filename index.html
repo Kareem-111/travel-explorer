@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover beautiful destinations and plan your next adventure with Travel Explorer.">
+  <title>Travel Explorer | Discover the World</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#home" class="logo">Travel<span>Explorer.</span></a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <button id="themeToggle" class="theme-btn" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">YOUR NEXT ADVENTURE STARTS HERE</p>
+        <h1>Explore the world.<br><span>Find your escape.</span></h1>
+        <p class="hero-text">
+          Discover breathtaking destinations, beautiful landscapes,
+          and unforgettable places around the world.
+        </p>
+        <a href="#destinations" class="primary-btn">Explore Destinations →</a>
+      </div>
+    </section>
+
+    <section class="destinations section" id="destinations">
+      <div class="section-heading">
+        <p class="eyebrow">TRAVEL INSPIRATION</p>
+        <h2>Discover Amazing Places</h2>
+        <p>Find your next favorite destination.</p>
+      </div>
+
+      <div class="search-box">
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search destinations..."
+          aria-label="Search destinations"
+        >
+      </div>
+
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-category="all">All Places</button>
+        <button class="filter-btn" data-category="beach">Beaches</button>
+        <button class="filter-btn" data-category="mountain">Mountains</button>
+        <button class="filter-btn" data-category="city">Cities</button>
+      </div>
+
+      <div class="destination-grid" id="destinationGrid">
+
+        <article class="destination-card" data-category="beach" data-name="Bali Indonesia">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80" alt="Tropical scenery in Bali" loading="lazy">
+            <button class="favorite-btn" aria-label="Add Bali to favorites" aria-pressed="false">♡</button>
+            <span class="category-tag">Beach</span>
+          </div>
+          <div class="card-content">
+            <p class="location">📍 Indonesia</p>
+            <h3>Bali</h3>
+            <p>Discover tropical beaches, green rice terraces, and peaceful temples.</p>
+            <button class="details-btn" data-place="Bali">Discover More →</button>
+          </div>
+        </article>
+
+        <article class="destination-card" data-category="mountain" data-name="Swiss Alps Switzerland">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=800&q=80" alt="Majestic alpine mountain scenery" loading="lazy">
+            <button class="favorite-btn" aria-label="Add Swiss Alps to favorites" aria-pressed="false">♡</button>
+            <span class="category-tag">Mountain</span>
+          </div>
+          <div class="card-content">
+            <p class="location">📍 Switzerland</p>
+            <h3>Swiss Alps</h3>
+            <p>Experience dramatic mountains, fresh air, and stunning alpine views.</p>
+            <button class="details-btn" data-place="Swiss Alps">Discover More →</button>
+          </div>
+        </article>
+
+        <article class="destination-card" data-category="city" data-name="Paris France">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="Paris city and Eiffel Tower" loading="lazy">
+            <button class="favorite-btn" aria-label="Add Paris to favorites" aria-pressed="false">♡</button>
+            <span class="category-tag">City</span>
+          </div>
+          <div class="card-content">
+            <p class="location">📍 France</p>
+            <h3>Paris</h3>
+            <p>Explore charming streets, famous landmarks, and beautiful architecture.</p>
+            <button class="details-btn" data-place="Paris">Discover More →</button>
+          </div>
+        </article>
+
+        <article class="destination-card" data-category="beach" data-name="Maldives Indian Ocean">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80" alt="Clear blue waters of a tropical island" loading="lazy">
+            <button class="favorite-btn" aria-label="Add Maldives to favorites" aria-pressed="false">♡</button>
+            <span class="category-tag">Beach</span>
+          </div>
+          <div class="card-content">
+            <p class="location">📍 Indian Ocean</p>
+            <h3>Maldives</h3>
+            <p>Relax beside crystal-clear waters and enjoy peaceful island scenery.</p>
+            <button class="details-btn" data-place="Maldives">Discover More →</button>
+          </div>
+        </article>
+
+        <article class="destination-card" data-category="mountain" data-name="Hunza Pakistan">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Snow-covered mountain peaks" loading="lazy">
+            <button class="favorite-btn" aria-label="Add Hunza to favorites" aria-pressed="false">♡</button>
+            <span class="category-tag">Mountain</span>
+          </div>
+          <div class="card-content">
+            <p class="location">📍 Pakistan</p>
+            <h3>Hunza Valley</h3>
+            <p>Admire towering peaks, peaceful valleys, and unforgettable views.</p>
+            <button class="details-btn" data-place="Hunza Valley">Discover More →</button>
+          </div>
+        </article>
+
+        <article class="destination-card" data-category="city" data-name="Istanbul Turkey">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=800&q=80" alt="Historic Istanbul architecture" loading="lazy">
+            <button class="favorite-btn" aria-label="Add Istanbul to favorites" aria-pressed="false">♡</button>
+            <span class="category-tag">City</span>
+          </div>
+          <div class="card-content">
+            <p class="location">📍 Türkiye</p>
+            <h3>Istanbul</h3>
+            <p>Discover historic architecture, colorful markets, and local culture.</p>
+            <button class="details-btn" data-place="Istanbul">Discover More →</button>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="empty-message" id="emptyMessage" hidden>
+        No destinations found. Try another search!
+      </p>
+
+      <div class="favorites-summary">
+        ❤️ Your favorite destinations: <strong id="favoriteCount">0</strong>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1000&q=80" alt="Beautiful natural landscape" loading="lazy">
+      </div>
+      <div class="about-content">
+        <p class="eyebrow">ABOUT OUR WEBSITE</p>
+        <h2>Every journey begins with a dream.</h2>
+        <p>
+          Travel Explorer helps you discover inspiring destinations,
+          explore different travel categories, and save the places
+          you would love to visit.
+        </p>
+        <div class="about-points">
+          <p>✓ Explore destinations around the world</p>
+          <p>✓ Find places that match your interests</p>
+          <p>✓ Save your favorite travel ideas</p>
+        </div>
+        <a href="#destinations" class="primary-btn">Start Exploring</a>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h2>Let's Talk Travel</h2>
+        <p>Have a question or a destination suggestion? Send us a message.</p>
+      </div>
+
+      <form id="contactForm" class="contact-form">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" placeholder="Enter your name" required>
+
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" placeholder="Enter your email" required>
+
+        <label for="message">Your message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell us about your travel ideas..." required></textarea>
+
+        <button class="primary-btn submit-btn" type="submit">Send Message →</button>
+        <p id="formStatus" class="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#home" class="logo footer-logo">Travel<span>Explorer.</span></a>
+    <p>Discover more. Travel further. Make memories.</p>
+    <p class="copyright">© <span id="year"></span> Travel Explorer. Student project.</p>
+  </footer>
+
+  <dialog id="destinationDialog" class="destination-dialog">
+    <button class="dialog-close" id="dialogClose" aria-label="Close details">×</button>
+    <p class="eyebrow">DESTINATION GUIDE</p>
+    <h2 id="dialogTitle">Destination</h2>
+    <p id="dialogText"></p>
+    <button class="primary-btn" id="dialogDone">Sounds Great!</button>
+  </dialog>
+
+</body>
+</html>
